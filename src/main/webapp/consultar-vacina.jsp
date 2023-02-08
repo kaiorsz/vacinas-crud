@@ -11,8 +11,8 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Consultar Vacina</h2>
-    <div class="row justify-content-center">
+<h2 class="justify-content-center">Consultar Vacina</h2>
+    <div class="justify-content-center">
         <div class="col-md-6">
             Titulo: <input class="form-control" type="text" name="titulo" disabled value="${vacina.titulo}">
             Descricao: <input  class="form-control" type="text" name="descricao" disabled value="${vacina.descricao}">

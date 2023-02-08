@@ -11,9 +11,9 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Adicionar Usuário</h2>
+<h2 class="">Adicionar Usuário</h2>
 <form action="adicionarUsuario" method="post">
-    <div class="row justify-content-center">
+    <div class="justify-content-center">
         <div class="col-md-6">
             Nome: <input class="form-control" type="text" name="nome" required>
             Data Nascimento: <input  class="form-control" type="date" name="data_nascimento" required>

@@ -11,9 +11,9 @@
         />
     </head>
     <body>
-    <h2 class="row justify-content-center">Adicionar Agenda</h2>
+    <h2 class="justify-content-center">Adicionar Agenda</h2>
         <form action="adicionarAgenda" method="post">
-            <div class="row justify-content-center">
+            <div class="justify-content-center">
                 <div class="col-md-6">
                     Data:
                     <input class="form-control" type="date" name="data" required /> Hora:

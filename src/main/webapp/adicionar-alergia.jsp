@@ -11,9 +11,9 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Adicionar Alergia</h2>
+<h2 class="justify-content-center">Adicionar Alergia</h2>
 <form action="adicionarAlergia" method="post">
-    <div class="row justify-content-center">
+    <div class="justify-content-center">
         <div class="col-md-6">
             Nome: <input class="form-control" type="text" name="nome" required>
             <br>

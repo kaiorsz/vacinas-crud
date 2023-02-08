@@ -11,9 +11,9 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Adicionar Vacina</h2>
+<h2 class="justify-content-center">Adicionar Vacina</h2>
 <form action="adicionarVacina" method="post">
-    <div class="row justify-content-center">
+    <div class="justify-content-center">
         <div class="col-md-6">
             Titulo: <input class="form-control" type="text" name="titulo" required>
             Descricao: <input  class="form-control" type="text" name="descricao" required>

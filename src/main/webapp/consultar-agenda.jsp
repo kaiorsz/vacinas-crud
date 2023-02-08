@@ -11,8 +11,8 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Consultar Agenda</h2>
-    <div class="row justify-content-center">
+<h2 class="justify-content-center">Consultar Agenda</h2>
+    <div class="justify-content-center">
         <div class="col-md-6">
             Data: <input class="form-control" type="date" name="data" disabled value="${agenda.data}">
             Hora: <input class="form-control" type="time" name="hora" disabled value="${agenda.hora}">

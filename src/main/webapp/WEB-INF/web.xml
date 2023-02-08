@@ -5,18 +5,8 @@
          version="3.1">
 
   <servlet>
-    <servlet-name>primeiraServlet</servlet-name>
-    <servlet-class>br.com.vacinas.PrimeiraServlet</servlet-class>
-  </servlet>
-
-  <servlet>
     <servlet-name>listarAgendas</servlet-name>
     <servlet-class>br.com.vacinas.servlets.agenda.ServletListarAgendas</servlet-class>
   </servlet>
-
-  <servlet-mapping>
-    <servlet-name>primeiraServlet</servlet-name>
-    <url-pattern>/primeiraServlet</url-pattern>
-  </servlet-mapping>
 
 </web-app>

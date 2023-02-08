@@ -11,9 +11,9 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Dar Baixa Agenda</h2>
+<h2 class="justify-content-center">Dar Baixa Agenda</h2>
 <form action="darBaixaAgenda" method="post">
-    <div class="row justify-content-center">
+    <div class="justify-content-center">
         <div class="col-md-6">
             <input class="form-control" type="text" name="id" value="${agenda.id}" hidden>
             Data: <input class="form-control" type="date" name="data" value="${agenda.data}" disabled>

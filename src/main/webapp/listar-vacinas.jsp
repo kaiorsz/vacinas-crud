@@ -11,8 +11,8 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Lista de Vacinas</h2>
-<div class="row justify-content-center">
+<h2 class="justify-content-center">Lista de Vacinas</h2>
+<div class="justify-content-center">
     <div class="col-auto">
 
     <table class="table table-striped">

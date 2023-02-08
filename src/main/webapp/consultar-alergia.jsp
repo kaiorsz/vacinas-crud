@@ -11,8 +11,8 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Consultar Alergia</h2>
-    <div class="row justify-content-center">
+<h2 class="justify-content-center">Consultar Alergia</h2>
+    <div class="justify-content-center">
         <div class="col-md-6">
             Nome: <input class="form-control" type="text" name="nome" disabled value="${alergia.nome}">
             <br>

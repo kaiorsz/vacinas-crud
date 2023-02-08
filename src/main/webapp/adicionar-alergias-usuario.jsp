@@ -11,9 +11,9 @@
         />
     </head>
 <body>
-<h2 class="row justify-content-center">Adicionar Alergias Usuário - ${usuario.nome}</h2>
+<h2 class="justify-content-center">Adicionar Alergias Usuário - ${usuario.nome}</h2>
 <form action="adicionarAlergiasUsuario" method="post">
-    <div class="row justify-content-center">
+    <div class="justify-content-center">
         <div class="col-md-6">
             Usuário: <input class="form-control" type="text" name="usuario" value="${usuario.id}">
             Alergia: <select name="alergia" class="form-control">
