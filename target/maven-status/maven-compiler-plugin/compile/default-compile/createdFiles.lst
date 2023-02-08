@@ -7,7 +7,6 @@ br\com\vacinas\servlets\agenda\ServletDarBaixaAgenda.class
 br\com\vacinas\servlets\alergia\ServletCriarAlergiasUsuario.class
 br\com\vacinas\servlets\alergia\ServletConsultarAlergia.class
 br\com\vacinas\model\Alergia.class
-br\com\vacinas\PrimeiraServlet.class
 br\com\vacinas\servlets\agenda\ServletConsultarAgenda.class
 br\com\vacinas\dao\impl\AlergiaUsuarioDAOImpl.class
 br\com\vacinas\model\enums\SituacaoEnum.class
