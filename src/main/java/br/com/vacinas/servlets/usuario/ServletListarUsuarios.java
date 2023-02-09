@@ -17,7 +17,7 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(value = "/listarUsuarios")
+@WebServlet(value = "/listaUsuarios")
 public class ServletListarUsuarios extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,10 +38,7 @@ public class ServletListarUsuarios extends HttpServlet {
         request.setAttribute("listaAlergias", listaAlergias);
         request.setAttribute("usuarios", usuarios);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/listar-usuarios.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/consultaUsuarios.jsp");
         dispatcher.forward(request, response);
-
     }
-
-
 }

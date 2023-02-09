@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 
-@WebServlet("/removerUsuario")
+@WebServlet("/removeUsuario")
 public class ServletRemoverUsuario extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,8 +24,6 @@ public class ServletRemoverUsuario extends HttpServlet {
 
         usuarioDAOImpl.delete(Long.valueOf(idStr));
 
-        response.sendRedirect("listarUsuarios");
-
+        response.sendRedirect("listaUsuarios");
     }
-
 }

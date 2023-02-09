@@ -1,4 +1,4 @@
-package br.com.vacinas.servlets.agenda;
+package br.com.vacinas.servlets.alergia;
 
 import br.com.vacinas.dao.impl.AlergiaDAOImpl;
 
@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.util.List;
 
-@WebServlet("/listarAlergias")
+@WebServlet("/listaAlergias")
 public class ServletListarAlergias extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -27,9 +27,8 @@ public class ServletListarAlergias extends HttpServlet {
 
         request.setAttribute("alergias", alergias);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/listar-alergias.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/consultaAlergias.jsp");
         dispatcher.forward(request, response);
-
     }
 
 

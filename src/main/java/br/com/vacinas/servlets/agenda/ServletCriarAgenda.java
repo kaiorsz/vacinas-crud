@@ -1,4 +1,5 @@
 package br.com.vacinas.servlets.agenda;
+
 import br.com.vacinas.dao.impl.AgendaDAOImpl;
 import br.com.vacinas.dao.impl.UsuarioDAOImpl;
 import br.com.vacinas.dao.impl.VacinaDAOImpl;
@@ -7,6 +8,7 @@ import br.com.vacinas.model.Agenda;
 import br.com.vacinas.model.enums.SituacaoEnum;
 import br.com.vacinas.model.Usuario;
 import br.com.vacinas.model.Vacina;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +22,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-@WebServlet("/adicionarAgenda")
+
+@WebServlet("/addAgenda")
 public class ServletCriarAgenda extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,13 +33,13 @@ public class ServletCriarAgenda extends HttpServlet {
         UsuarioDAOImpl dao = new UsuarioDAOImpl(connection);
         VacinaDAOImpl vacinaDAOImpl = new VacinaDAOImpl(connection);
 
-        List < Usuario > usuarios = dao.findAll();
-        List < Vacina > vacinas = vacinaDAOImpl.findAll();
+        List<Usuario> usuarios = dao.findAll();
+        List<Vacina> vacinas = vacinaDAOImpl.findAll();
 
         request.setAttribute("usuarios", usuarios);
         request.setAttribute("vacinas", vacinas);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/adicionar-agenda.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/addAgenda.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -63,7 +66,7 @@ public class ServletCriarAgenda extends HttpServlet {
         agendaDAOImpl.save(agenda);
 
         agendaDAOImpl.saveAgendaUsuario(Long.parseLong(usuario_id), agendaDAOImpl.getAgendaInserida());
-        agendaDAOImpl.saveVacinaAgenda(Long.parseLong(vacina_id), agendaDAOImpl.getAgendaInserida());
+        agendaDAOImpl.salvaVacinaAgendada(Long.parseLong(vacina_id), agendaDAOImpl.getAgendaInserida());
 
         for (Integer i = 1; i <= vacina.getDoses() - 1; i++) {
 
@@ -77,12 +80,12 @@ public class ServletCriarAgenda extends HttpServlet {
             agendaDAOImpl.save(agenda);
 
             agendaDAOImpl.saveAgendaUsuario(Long.parseLong(usuario_id), agendaDAOImpl.getAgendaInserida());
-            agendaDAOImpl.saveVacinaAgenda(Long.parseLong(vacina_id), agendaDAOImpl.getAgendaInserida());
-
+            agendaDAOImpl.salvaVacinaAgendada(Long.parseLong(vacina_id), agendaDAOImpl.getAgendaInserida());
         }
 
-        response.sendRedirect("listarAgendas");
+        response.sendRedirect("listaAgenda");
     }
+
     protected Date calcularData(Integer periodicidade, Integer intervalo, Date data) {
 
         Calendar calendar = Calendar.getInstance();
@@ -114,6 +117,7 @@ public class ServletCriarAgenda extends HttpServlet {
     public LocalDate convertToLocalDateViaSqlDate(Date dateToConvert) {
         return new java.sql.Date(dateToConvert.getTime()).toLocalDate();
     }
+
     public Date convertToDateViaSqlDate(LocalDate dateToConvert) {
         return java.sql.Date.valueOf(dateToConvert);
     }

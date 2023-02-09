@@ -12,7 +12,7 @@
     </head>
 <body>
 <h2 class="">Adicionar Usuário</h2>
-<form action="adicionarUsuario" method="post">
+<form action="addUsuario" method="post">
     <div class="justify-content-center">
         <div class="col-md-6">
             Nome: <input class="form-control" type="text" name="nome" required>
@@ -56,10 +56,10 @@
             <option value="EX">99 - Estrangeiro</option>
              </select>
             <br>
-           <input class="form-control btn btn-primary" type="submit" value="Enviar">
+           <input class="form-control btn btn-primary" type="submit" style="width: 10%;" value="Enviar">
            <br>
            <br>
-           <a href="listarAgendas" class="form-control btn btn-primary">
+           <a href="painel" class="form-control btn btn-primary" style="width: 10%;background-color: red">
             Voltar
            </a>
         </div>

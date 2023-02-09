@@ -31,9 +31,8 @@ public class ServletDarBaixaAgenda extends HttpServlet {
 
         request.setAttribute("agenda", agenda);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/dar-baixa-agenda.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/baixaAgenda.jsp");
         dispatcher.forward(request, response);
-
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -56,10 +55,6 @@ public class ServletDarBaixaAgenda extends HttpServlet {
 
         agendaDAOImpl.update(agenda);
 
-        response.sendRedirect("listarAgendas");
-
-
+        response.sendRedirect("painel");
     }
-
-
 }

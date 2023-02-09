@@ -12,7 +12,7 @@
     </head>
 <body>
 <h2 class="justify-content-center">Adicionar Alergias Usuário - ${usuario.nome}</h2>
-<form action="adicionarAlergiasUsuario" method="post">
+<form action="adicionaAlergiasUsuario" method="post">
     <div class="justify-content-center">
         <div class="col-md-6">
             Usuário: <input class="form-control" type="text" name="usuario" value="${usuario.id}">
@@ -22,10 +22,10 @@
                         </c:forEach>
                       </select>
                       <br/>
-                  <input class="form-control btn btn-primary" type="submit" value="Enviar">
+                  <input class="form-control btn btn-primary" type="submit" style="width: 10%;" value="Enviar">
                     <br>
                     <br>
-                    <a href="listarUsuarios" class="form-control btn btn-primary">
+                    <a href="listaUsuarios" class="form-control btn btn-primary">
                      Voltar
                     </a>
         </div>

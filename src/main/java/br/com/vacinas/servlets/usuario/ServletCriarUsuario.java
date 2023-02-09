@@ -15,11 +15,11 @@ import java.sql.Connection;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-@WebServlet("/adicionarUsuario")
+@WebServlet("/addUsuario")
 public class ServletCriarUsuario extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/adicionar-usuario.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/addUsuario.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -39,15 +39,13 @@ public class ServletCriarUsuario extends HttpServlet {
         String cidade = request.getParameter("cidade");
         String uf = request.getParameter("uf");
 
-        LocalDate data_nascimento = LocalDate.parse(data_nascimentoStr,  DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        LocalDate data_nascimento = LocalDate.parse(data_nascimentoStr, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         Integer numero = Integer.parseInt(numeroStr);
 
         Usuario usuario = new Usuario(null, nome, data_nascimento, sexo, logradouro, numero, setor, cidade, uf);
 
         usuarioDAOImpl.save(usuario);
 
-        response.sendRedirect("listarUsuarios");
+        response.sendRedirect("listaUsuarios");
     }
-
-
 }

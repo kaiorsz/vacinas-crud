@@ -1,4 +1,4 @@
-<html>
+<html lang="pt">
 <head>
     <meta charset="UTF-8"/>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -14,48 +14,10 @@
 <body>
 
 <div style="border: solid;width: 60%;margin: 2em">
-
-    <h2 class="justify-content-center">Painel de Controle</h2>
-
-    <table class="table table-striped">
-        <thead class="">
-        <tr>
-            <th scope="col">Vacinas</th>
-            <th scope="col">Usuarios</th>
-            <th scope="col">Alergias</th>
-            <th scope="col">Agendas</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>
-                <a class="btn btn-outline-primary btn-sm my-2" style="background-color: cadetblue;color: white;border-color: cadetblue;" href="adicionarVacina">Adicionar Vacina</a>
-                <br/>
-                <a class="btn btn-outline-primary btn-sm my-2" style="background-color: cadetblue;color: white;border-color: cadetblue;" href="listarVacinas">Listar Vacinas</a>
-            </td>
-            <td>
-                <a class="btn btn-outline-primary btn-sm my-2" style="background-color: cadetblue;color: white;border-color: cadetblue;" href="adicionarUsuario">Adicionar Usuário</a>
-                <br/>
-                <a class="btn btn-outline-primary btn-sm my-2" style="background-color: cadetblue;color: white;border-color: cadetblue;" href="listarUsuarios">Listar Usuários</a>
-            </td>
-            <td>
-                <a class="btn btn-outline-primary btn-sm my-2" style="background-color: cadetblue;color: white;border-color: cadetblue;" href="adicionarAlergia">Adicionar Alergia</a>
-                <br/>
-                <a class="btn btn-outline-primary btn-sm my-2" style="background-color: cadetblue;color: white;border-color: cadetblue;" href="listarAlergias">Listar Alergias</a>
-            </td>
-            <td>
-                <a class="btn btn-outline-primary btn-sm my-2" style="background-color: cadetblue;color: white;border-color: cadetblue;" href="adicionarAgenda">Adicionar Agenda</a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-<div style="border: solid;width: 60%;margin: 2em">
     <h2 class="justify-content-center">Lista de Agendas</h2>
     <div class="justify-content-center">
         <div class="col-auto">
-            <table class="table table-striped" style="border: solid;color: cadetblue;">
+            <table class="table table-striped">
                 <thead class="thead-striped">
                 <tr style="border:outset">
                     <th scope="col">Data</th>
@@ -85,10 +47,10 @@
                         <td>${agenda.getVacina().titulo}</td>
                         <td>${agenda.getVacina().doses}</td>
                         <td>
-                            <a class="btn btn-outline-danger btn-small my-2" href="removerAgenda?id=${agenda.id}">Remover
+                            <a class="btn btn-outline-danger btn-small my-2" href="removeAgenda?id=${agenda.id}">Remover
                                 Agenda</a>
                             <br/>
-                            <a class="btn btn-outline-success btn-small my-2" href="consultarAgenda?id=${agenda.id}">Consultar
+                            <a class="btn btn-outline-success btn-small my-2" href="consultaAgenda?id=${agenda.id}">Consultar
                                 Agenda</a>
                             <br/>
                             <c:if test="${agenda.data_situacao == null}">
@@ -100,7 +62,13 @@
                 </c:forEach>
                 </tbody>
             </table>
+            <br>
+            <a href="painel" class="btn btn-outline-primary btn-small my-2">
+                Voltar
+            </a>
         </div>
 </body>
 
+
+</body>
 </html>

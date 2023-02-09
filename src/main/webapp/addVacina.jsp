@@ -12,7 +12,7 @@
     </head>
 <body>
 <h2 class="justify-content-center">Adicionar Vacina</h2>
-<form action="adicionarVacina" method="post">
+<form action="addVacina" method="post">
     <div class="justify-content-center">
         <div class="col-md-6">
             Titulo: <input class="form-control" type="text" name="titulo" required>
@@ -27,10 +27,10 @@
                                 </select>
             Intervalo: <input id="intervalo"  value="" class="form-control" type="number" name="intervalo">
             <br>
-            <input class="form-control btn btn-primary" type="submit" value="Enviar">
+            <input class="form-control btn btn-primary" type="submit" style="width: 10%;" value="Enviar">
             <br>
             <br>
-            <a href="listarAgendas" class="form-control btn btn-primary">
+            <a href="painel" class="form-control btn btn-primary" style="width: 10%;background-color: red">
              Voltar
             </a>
         </div>

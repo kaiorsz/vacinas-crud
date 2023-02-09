@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 
-@WebServlet("/consultarVacina")
+@WebServlet("/consultaVacina")
 public class ServletConsultarVacina extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,10 +28,7 @@ public class ServletConsultarVacina extends HttpServlet {
 
         request.setAttribute("vacina", vacina);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/consultar-vacina.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/consultaVacina.jsp");
         dispatcher.forward(request, response);
-
     }
-
-
 }

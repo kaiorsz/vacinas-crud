@@ -11,25 +11,19 @@
         />
     </head>
 <body>
-<h2 class="justify-content-center">Adicionar Alergia</h2>
-<form action="adicionarAlergia" method="post">
+<div style="border: solid;width: 60%;margin: 2em">
+<h2 class="justify-content-center">Consultar Alergia</h2>
     <div class="justify-content-center">
         <div class="col-md-6">
-            Nome: <input class="form-control" type="text" name="nome" required>
+            Nome: <input class="form-control" type="text" name="nome" disabled value="${alergia.nome}">
             <br>
-         <input class="form-control btn btn-primary" type="submit" value="Enviar">
-           <br>
-           <br>
-           <a href="listarAgendas" class="form-control btn btn-primary">
+
+            <a href="listaAlergias" class="btn btn-primary">
             Voltar
-           </a>
+            </a>
 
         </div>
-
-
-
     </div>
-</form>
-
+</div>
 </body>
 </html>

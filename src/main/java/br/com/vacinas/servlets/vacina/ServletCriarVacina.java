@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 
-@WebServlet("/adicionarVacina")
+@WebServlet("/addVacina")
 public class ServletCriarVacina extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/adicionar-vacina.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/addVacina.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -38,16 +38,14 @@ public class ServletCriarVacina extends HttpServlet {
         Integer periodicidade = Integer.parseInt(periodicidadeStr);
         Integer intervalo = Integer.parseInt(intervaloStr);
 
-        if(doses < 1){
+        if (doses < 1) {
             periodicidade = null;
         }
 
-        Vacina vacina = new Vacina(null, titulo, descricao , doses, periodicidade, intervalo);
+        Vacina vacina = new Vacina(null, titulo, descricao, doses, periodicidade, intervalo);
 
         vacinaDAOImpl.save(vacina);
 
-        response.sendRedirect("listarVacinas");
-
+        response.sendRedirect("listaVacinas");
     }
-
 }

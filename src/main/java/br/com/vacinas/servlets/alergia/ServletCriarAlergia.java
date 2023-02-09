@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 
-@WebServlet("/adicionarAlergia")
+@WebServlet("/adicionaAlergia")
 public class ServletCriarAlergia extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/adicionar-alergia.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/addAlergia.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -33,9 +33,7 @@ public class ServletCriarAlergia extends HttpServlet {
 
         alergiaDAOImpl.save(alergia);
 
-        response.sendRedirect("listarAlergias");
-
-
+        response.sendRedirect("listaAlergias");
     }
 
 }

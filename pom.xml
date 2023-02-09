@@ -16,6 +16,22 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
+  <build>
+    <finalName>vacinas</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.4.5.v20170502</version>
+        <configuration>
+          <webApp>
+            <contextPath>/vacinas</contextPath>
+          </webApp>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -38,21 +54,4 @@
     </dependency>
 
   </dependencies>
-
-
-  <build>
-    <finalName>vacinas</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.4.5.v20170502</version>
-        <configuration>
-          <webApp>
-            <contextPath>/vacinas</contextPath>
-          </webApp>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>

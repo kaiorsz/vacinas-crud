@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 
-@WebServlet("/consultarUsuario")
+@WebServlet("/consultaUsuario")
 public class ServletConsultarUsuario extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,10 +28,7 @@ public class ServletConsultarUsuario extends HttpServlet {
 
         request.setAttribute("usuario", usuario);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/consultar-usuario.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/consultaUsuario.jsp");
         dispatcher.forward(request, response);
-
     }
-
-
 }

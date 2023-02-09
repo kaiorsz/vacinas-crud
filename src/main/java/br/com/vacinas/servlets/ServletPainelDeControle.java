@@ -1,9 +1,9 @@
-package br.com.vacinas.servlets.agenda;
+package br.com.vacinas.servlets;
 
-import br.com.vacinas.config.ConnectionFactory;
 import br.com.vacinas.dao.impl.AgendaDAOImpl;
 import br.com.vacinas.dao.impl.UsuarioDAOImpl;
 import br.com.vacinas.dao.impl.VacinaDAOImpl;
+import br.com.vacinas.config.ConnectionFactory;
 import br.com.vacinas.model.Agenda;
 import br.com.vacinas.model.Usuario;
 import br.com.vacinas.model.Vacina;
@@ -19,8 +19,8 @@ import java.sql.Connection;
 import java.util.List;
 
 
-@WebServlet(value = "/listaAgenda")
-public class ServletListarAgendas extends HttpServlet {
+@WebServlet(value = "/painel")
+public class ServletPainelDeControle extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -55,7 +55,7 @@ public class ServletListarAgendas extends HttpServlet {
 
         request.setAttribute("agendas", agendas);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/listaAgendas.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/painel.jsp");
         dispatcher.forward(request, response);
     }
 }

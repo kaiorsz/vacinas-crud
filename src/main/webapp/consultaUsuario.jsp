@@ -1,30 +1,34 @@
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8" />
-        <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %> <%@
-        page contentType="text/html; charset=UTF-8" %>
-        <link
+<head>
+    <meta charset="UTF-8"/>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@
+            page contentType="text/html; charset=UTF-8" %>
+    <link
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous"
-        />
-    </head>
+    />
+</head>
 <body>
-<h2 class="justify-content-center">Consultar Usuário</h2>
+<div style="border: solid;width: 60%;margin: 2em">
+    <h2 class="justify-content-center">Consultar Usuário</h2>
     <div class="justify-content-center">
         <div class="col-md-6">
             Nome: <input class="form-control" type="text" name="nome" disabled value="${usuario.nome}">
-            Data Nascimento: <input  class="form-control" type="date" name="data_nascimento" disabled value="${usuario.data_nascimento}">
+            Data Nascimento: <input class="form-control" type="date" name="data_nascimento" disabled
+                                    value="${usuario.data_nascimento}">
             Sexo: <select name="sexo" class="form-control" disabled value="${usuario.sexo}">
             <option value="M" selected>Masculino</option>
             <option value="F">Feminino</option>
-            </select>
-            Logradouro: <input class="form-control" type="text" name="logradouro" disabled value="${usuario.logradouro}">
+        </select>
+            Logradouro: <input class="form-control" type="text" name="logradouro" disabled
+                               value="${usuario.logradouro}">
             Numero: <input class="form-control" type="text" name="numero" disabled value="${usuario.numero}">
             Setor: <input class="form-control" type="text" name="setor" disabled value="${usuario.setor}">
-            Cidade: <input class="form-control" type="text" name="cidade" disabled  value="${usuario.cidade}">
-            UF:  <select class="form-control" name="uf" disabled value="${usuario.uf}">
+            Cidade: <input class="form-control" type="text" name="cidade" disabled value="${usuario.cidade}">
+            UF: <select class="form-control" name="uf" disabled value="${usuario.uf}">
             <option value="AC">1 - Acre</option>
             <option value="AL">2 - Alagoas</option>
             <option value="AP">3 - Amapá</option>
@@ -53,16 +57,15 @@
             <option value="SE">26 - Sergipe</option>
             <option value="TO">27 - Tocantins</option>
             <option value="EX">99 - Estrangeiro</option>
-             </select>
+        </select>
             <br>
-                  <a href="listarUsuarios" class="btn btn-primary">
-                                    Voltar
-                                    </a>
+            <a href="listaUsuarios" class="btn btn-primary">
+                Voltar
+            </a>
         </div>
     </div>
 
 
-
-
+</div>
 </body>
 </html

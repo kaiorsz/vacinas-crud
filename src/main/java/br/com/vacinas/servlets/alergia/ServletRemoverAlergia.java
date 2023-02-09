@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 
-@WebServlet("/removerAlergia")
+@WebServlet("/removeAlergia")
 public class ServletRemoverAlergia extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,8 +24,6 @@ public class ServletRemoverAlergia extends HttpServlet {
 
         alergiaDAOImpl.delete(Long.valueOf(idStr));
 
-        response.sendRedirect("listarAlergias");
-
+        response.sendRedirect("listaAlergias");
     }
-
 }

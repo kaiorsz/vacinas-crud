@@ -259,7 +259,7 @@ public class AgendaDAOImpl implements AgendaDAO {
     }
 
     @Override
-    public void saveVacinaAgenda(Long id_vacina, Long id_agenda) {
+    public void salvaVacinaAgendada(Long id_vacina, Long id_agenda) {
 
         try {
             String sql = "INSERT INTO Vacina_Agenda (id_vacina, id_agenda) VALUES (?, ?)";

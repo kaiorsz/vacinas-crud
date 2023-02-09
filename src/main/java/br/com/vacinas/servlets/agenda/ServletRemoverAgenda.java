@@ -1,6 +1,8 @@
 package br.com.vacinas.servlets.agenda;
+
 import br.com.vacinas.dao.impl.AgendaDAOImpl;
 import br.com.vacinas.config.ConnectionFactory;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 
-@WebServlet("/removerAgenda")
+@WebServlet("/removeAgenda")
 public class ServletRemoverAgenda extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,7 +24,7 @@ public class ServletRemoverAgenda extends HttpServlet {
 
         agendaDAOImpl.delete(Long.valueOf(idStr));
 
-        response.sendRedirect("listarAgendas");
+        response.sendRedirect("painel");
     }
 
 }

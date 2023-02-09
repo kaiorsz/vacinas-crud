@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.util.List;
 
-@WebServlet("/listarVacinas")
+@WebServlet("/listaVacinas")
 public class ServletListarVacinas extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,10 +26,7 @@ public class ServletListarVacinas extends HttpServlet {
 
         request.setAttribute("vacinas", vacinas);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/listar-vacinas.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/listaVacinas.jsp");
         dispatcher.forward(request, response);
-
     }
-
-
 }

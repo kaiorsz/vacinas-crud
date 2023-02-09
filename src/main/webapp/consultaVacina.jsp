@@ -21,7 +21,7 @@
             Intervalo: <input class="form-control" type="text" name="intervalo" disabled value="${vacina.intervalo}">
             <br>
 
-               <a href="listarVacinas" class="btn btn-primary">
+               <a href="listaVacinas" class="btn btn-primary">
                                         Voltar
                                         </a>
         </div>

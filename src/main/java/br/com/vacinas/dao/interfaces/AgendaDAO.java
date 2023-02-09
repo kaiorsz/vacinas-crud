@@ -7,13 +7,6 @@ import java.util.List;
 
 public interface AgendaDAO {
 
-    Agenda save(Agenda agenda);
-    void delete(Long id);
-    List<Agenda> findAll();
-    Agenda getById(Long id);
-
-    Agenda update(Agenda agenda);
-
     void saveAgendaUsuario(Long id_usuario, Long id_agenda);
 
     Long getAgendaInserida();
@@ -22,5 +15,12 @@ public interface AgendaDAO {
 
     Long getVacinaAgenda(Long id_agenda);
 
-    void saveVacinaAgenda(Long id_vacina, Long id_agenda);
+    void salvaVacinaAgendada(Long id_vacina, Long id_agenda);
+
+    Agenda save(Agenda agenda);
+    void delete(Long id);
+    List<Agenda> findAll();
+    Agenda getById(Long id);
+
+    Agenda update(Agenda agenda);
 }

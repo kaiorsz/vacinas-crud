@@ -18,29 +18,28 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.util.List;
 
-@WebServlet("/adicionarAlergiasUsuario")
+@WebServlet("/adicionaAlergiasUsuario")
 public class ServletCriarAlergiasUsuario extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-            Connection connection = ConnectionFactory.getConnection();
+        Connection connection = ConnectionFactory.getConnection();
 
-            AlergiaDAOImpl dao = new AlergiaDAOImpl(connection);
-            List<Alergia> alergias = dao.findAll();
+        AlergiaDAOImpl dao = new AlergiaDAOImpl(connection);
+        List<Alergia> alergias = dao.findAll();
 
-            request.setAttribute("alergias", alergias);
+        request.setAttribute("alergias", alergias);
 
 
-            String idStr = request.getParameter("id");
+        String idStr = request.getParameter("id");
 
-            UsuarioDAOImpl usuarioDAOImpl = new UsuarioDAOImpl(connection);
-            Usuario usuario = usuarioDAOImpl.getById(Long.valueOf(idStr));
+        UsuarioDAOImpl usuarioDAOImpl = new UsuarioDAOImpl(connection);
+        Usuario usuario = usuarioDAOImpl.getById(Long.valueOf(idStr));
 
-            request.setAttribute("usuario", usuario);
+        request.setAttribute("usuario", usuario);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/adicionar-alergias-usuario.jsp");
-            dispatcher.forward(request, response);
-
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/addAlergiaParaUsuario.jsp");
+        dispatcher.forward(request, response);
     }
 
 
@@ -57,8 +56,7 @@ public class ServletCriarAlergiasUsuario extends HttpServlet {
 
         dao.saveAlergiasUsuario(alergiaUsuario);
 
-        response.sendRedirect("listarUsuarios");
-
+        response.sendRedirect("listaUsuarios");
     }
 
 
